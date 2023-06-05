@@ -1,96 +1,480 @@
 {
-    "project": {
-        "id": "zb-faq-cailapub-template_ru",
-        "name": "zb-faq-cailapub-template_ru",
-        "folder": "/platform"
+  "project" : {
+    "id" : "call_center-1000094091-jxZ",
+    "name" : "call_center-1000094091-jxZ",
+    "folder" : "/platform"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "mystem",
+      "useShared" : false
     },
-    "settings": {
-        "language": "ru",
-        "spellingCorrection": false,
-        "classificationAlgorithm": "sts",
-        "validation": {
-            "phraseValidationEnabled": true,
-            "answerValidationEnabled": true,
-            "phraseValidationThreshold": 0.5,
-            "answerValidationThreshold": 0.8
-        },
-        "timezone": "Europe/Moscow",
-        "extendedSettings": {
-            "tokenizerEngine": "mystem",
-            "useShared": false
-        }
+    "shared" : false,
+    "validation" : {
+      "phraseValidationEnabled" : true,
+      "answerValidationEnabled" : true,
+      "phraseValidationThreshold" : 0.5,
+      "answerValidationThreshold" : 0.8
+    }
+  },
+  "intents" : [ {
+    "path" : "/пока",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
     },
-    "intents": [
-        {
-            "path": "/пока",
-            "description": null,
-            "answer": null,
-            "customData": null,
-            "enabled": true,
-            "phrases": [
-                {
-                    "text": "пока",
-                    "entities": null
-                }
-            ],
-            "patterns": null,
-            "slots": null
-        },
-        {
-            "path": "/привет",
-            "description": null,
-            "answer": null,
-            "customData": null,
-            "enabled": true,
-            "phrases": [
-                {
-                    "text": "привет",
-                    "entities": null
-                }
-            ],
-            "patterns": null,
-            "slots": null
-        }
-    ],
-    "entities": [],
-    "enabledSystemEntities": [
-        "duckling.number",
-        "duckling.time",
-        "duckling.duration",
-        "duckling.phone-number",
-        "duckling.email",
-        "duckling.url"
-    ],
-    "systemEntities": [
-        {
-            "name": "duckling.number",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.time",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.duration",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.phone-number",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.email",
-            "version": "v2",
-            "enabled": true
-        },
-        {
-            "name": "duckling.url",
-            "version": "v2",
-            "enabled": true
-        }
-    ]
+    "priority" : 0
+  }, {
+    "path" : "/привет",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "привет"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Какой у вас номер телефона?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "как вам позвонить"
+    }, {
+      "text" : "номер телефона"
+    }, {
+      "text" : "какой телефон"
+    }, {
+      "text" : "по какому номеру могу связаться?"
+    }, {
+      "text" : "нужен контактный номер телефона"
+    }, {
+      "text" : "скажите ваши контакты"
+    }, {
+      "text" : "Какой у вас номер телефона?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Где вы находитесь?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "какой у вас адрес"
+    }, {
+      "text" : "по какому адресу вы расположены"
+    }, {
+      "text" : "Где вы находитесь?"
+    }, {
+      "text" : "как к вам подъехать"
+    }, {
+      "text" : "какой адрес главного офиса"
+    }, {
+      "text" : "где головное отделение"
+    }, {
+      "text" : "узнать месторасположение"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/В каких городах есть офисы?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "В каких городах есть офисы?"
+    }, {
+      "text" : "в каких регионах у вас есть филиалы"
+    }, {
+      "text" : " вы открыты в разных городах"
+    }, {
+      "text" : "в каких городах можно вас найти"
+    }, {
+      "text" : "в каких регионах вы представлены"
+    }, {
+      "text" : "вы есть не в Москве?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Как связаться со службой поддержки?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "номер службы поддержки"
+    }, {
+      "text" : "позвонить в службу заботы о клиентах"
+    }, {
+      "text" : "телефон горячей линии"
+    }, {
+      "text" : "куда звонить чтобы оставить жалобу"
+    }, {
+      "text" : "скажите телефон службы поддержки"
+    }, {
+      "text" : "Контакты горячей линии"
+    }, {
+      "text" : "Как связаться со службой поддержки?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/По каким дням вы работаете?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "По каким дням вы работаете?"
+    }, {
+      "text" : "дни работы офисов"
+    }, {
+      "text" : "рабочие дни"
+    }, {
+      "text" : "к вам можно подъехать на выходных"
+    }, {
+      "text" : "по каким дням недели вы открыты"
+    }, {
+      "text" : "график работы"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Как вас найти в интернете?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Как вас найти в интернете?"
+    }, {
+      "text" : "вы есть в соцсетях"
+    }, {
+      "text" : "инстаграм компании"
+    }, {
+      "text" : "телеграм канал компании"
+    }, {
+      "text" : "дайте ссылку на аккаунт"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Есть ли у вас мобильное приложение?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "скачать мобильное приложение"
+    }, {
+      "text" : "вы есть в google play"
+    }, {
+      "text" : "вас можно найти в app store"
+    }, {
+      "text" : "в формате приложения"
+    }, {
+      "text" : "удобнее через приложение"
+    }, {
+      "text" : "Есть ли приложение на телефон?"
+    }, {
+      "text" : "Есть ли у вас мобильное приложение?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Какая у вас электронная почта?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "адрес электронной почты"
+    }, {
+      "text" : "как написать вам на почту"
+    }, {
+      "text" : "какая у вас почта"
+    }, {
+      "text" : "подскажите емейл"
+    }, {
+      "text" : "Какая у вас электронная почта?"
+    }, {
+      "text" : "отправить письмо на электронку"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/Хочу сотрудничать",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "куда обращаться по вопросам сотрудничества"
+    }, {
+      "text" : "Хочу сотрудничать"
+    }, {
+      "text" : "Есть бизнес предложение"
+    }, {
+      "text" : "предлагаем совместный проект"
+    }, {
+      "text" : "контакты для возможных партнеров"
+    }, {
+      "text" : "есть возможность партнерства"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/В какое время вы работаете?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "вы открыты ночью"
+    }, {
+      "text" : "в какие часы работаете"
+    }, {
+      "text" : "рабочие часы"
+    }, {
+      "text" : "рабочее время"
+    }, {
+      "text" : "Часы когда вы открыты"
+    }, {
+      "text" : "в какое время можно подъехать"
+    }, {
+      "text" : "В какое время вы работаете?"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты/Root/В каких странах есть офисы?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "в каких странах открыты ваши офисы"
+    }, {
+      "text" : "страны где вы представлены"
+    }, {
+      "text" : "В каких странах есть офисы?"
+    }, {
+      "text" : "где есть представительства в мире"
+    }, {
+      "text" : "международные филиалы"
+    }, {
+      "text" : "где офисы за границей"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/KnowledgeBase/FAQ.Контакты",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
+  }, {
+    "path" : "/Документы для оформления кредита",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Мне нужен кредит, как мне его получить?"
+    }, {
+      "text" : "Какие документы нужны?"
+    }, {
+      "text" : "Я хочу кредит"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Есть вопросы",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  } ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "spellerDictionary" : [ ],
+  "systemEntities" : [ {
+    "name" : "mystem.geo",
+    "enabled" : false
+  }, {
+    "name" : "mystem.persn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.obsc",
+    "enabled" : false
+  }, {
+    "name" : "mystem.patrn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.famn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.romn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.latn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.numb",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.intg",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.abbr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.name",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.surn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.patr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.geox",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.orgn",
+    "enabled" : false
+  }, {
+    "name" : "duckling.number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.ordinal",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.amount-of-money",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.distance",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.date",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time-of-day",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.duration",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.phone-number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.email",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.url",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "mlps-obscene.obscene",
+    "enabled" : false
+  }, {
+    "name" : "zb.datetime",
+    "enabled" : false
+  }, {
+    "name" : "zb.number",
+    "enabled" : false
+  } ],
+  "faq" : [ {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Какой у вас номер телефона?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Где вы находитесь?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/В каких городах есть офисы?",
+    "replies" : [ {
+      "type" : "text",
+      "text" : "В городе Душанбе",
+      "markup" : "plain",
+      "key" : "_g215tdxxu"
+    } ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Как связаться со службой поддержки?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/По каким дням вы работаете?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Как вас найти в интернете?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Есть ли у вас мобильное приложение?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Какая у вас электронная почта?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/Хочу сотрудничать",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/В какое время вы работаете?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/В каких странах есть офисы?",
+    "replies" : [ ]
+  }, {
+    "intentPath" : "/KnowledgeBase/FAQ.Контакты",
+    "replies" : [ ]
+  } ],
+  "skills" : [ ]
 }
