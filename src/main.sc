@@ -1,10 +1,10 @@
 require: slotfilling/slotFilling.sc
   module = sys.zb-common
-theme: /
+theme: /BankTheme
 
     state: Start
         q!: $regex</start>
-        a: Добрый день, Вы позвонили в call-center Dushanbe City, чем могу Вам помочь?
+        a: Добрый день, Вы позвонили в call-center Dushanbe City, чем могу Вам помочь? || tts = "Добрый день,# Вы позвонили в call-center Dushanbe City,# чем могу Вам помочь?"
         buttons:
             "Выдача кредита" -> /Предоставьте пожалуйста документы, подтверждающие вашу личность.
         intent: /Документы для оформления кредита || toState = "/Предоставьте пожалуйста документы, подтверждающие вашу личность."
@@ -21,8 +21,8 @@ theme: /
     state: KnowledgeBase
         intentGroup!: /KnowledgeBase
         a: Нашёл ответ в базе знаний!
-        script: $faq.pushReplies();
-
+        script: $f
+            
     state: NoMatch
         event!: noMatch
         a: Прошу прощения, переформулируйте Ваш вопрос.

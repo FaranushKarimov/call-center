@@ -29,5 +29,21 @@
     "name" : "Другие вопросы",
     "x" : 1297,
     "y" : 235
+  }, {
+    "id" : "/BankTheme/Start",
+    "x" : 290,
+    "y" : 770
+  }, {
+    "id" : "/BankTheme/Hello",
+    "x" : 290,
+    "y" : 1292
+  }, {
+    "id" : "/BankTheme/Bye",
+    "x" : 290,
+    "y" : 1694
+  }, {
+    "id" : "/BankTheme/KnowledgeBase",
+    "x" : 290,
+    "y" : 1995
   } ]
 }

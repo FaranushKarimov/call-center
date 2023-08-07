@@ -472,9 +472,6 @@
   }, {
     "intentPath" : "/KnowledgeBase/FAQ.Контакты/Root/В каких странах есть офисы?",
     "replies" : [ ]
-  }, {
-    "intentPath" : "/KnowledgeBase/FAQ.Контакты",
-    "replies" : [ ]
   } ],
   "skills" : [ ]
 }
